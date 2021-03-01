@@ -1,28 +1,20 @@
-import React, { useState } from "react";
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
+import ProductCard from "./components/Product-card";
+import Products from "./components/Products";
+import Header from "./components/Header"
 
-import Counter from "./components/Counter";
 
-const initialCounters = [
-  { id: 1, color: "blue" },
-  { id: 2, color: "red" },
-  { id: 3, color: "green" },
-];
 function App() {
-  const [counters, setCounters] = useState(initialCounters);
-  return (
-    <div>
-      {counters.map(({ id, color }) => (
-        <Counter key={id} color={color} />
-      ))}
-      <button
-        onClick={() => setCounters([{ id: 4, color: "purple" }, ...counters])}
-      >
-        Add Counter
-      </button>
-    </div>
-  );
+
+    return (
+        <div>
+            <Header />
+            <Products/>
+
+        </div>
+
+    );
 }
 
 export default App;
